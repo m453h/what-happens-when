@@ -507,8 +507,11 @@ and IIS for Windows.
   in our case it will fall back to the index file, as "/" is the main file
   (some cases can override this, but this is the most common method).
 * The server parses the file according to the handler. If Google
-  is running on PHP, the server uses PHP to interpret the index file, and
-  streams the output to the client.
+  is running on PHP, the server uses PHP to interpret the index file,
+* The handler may require to connect to a database server like MySQL, MongoDB or PostgreSQL
+  to fetch data such as user account details, last known location that Google uses to return
+  relevant results.
+* The handler streams the output to the client.
 
 Behind the scenes of the Browser
 ----------------------------------
